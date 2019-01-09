@@ -1,0 +1,19 @@
+{
+  "name": "vue-webpack-elementui-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jasonccj/vue-webpack-elementUI-admin.git"
+  },
+  "author": "Jasonccj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jasonccj/vue-webpack-elementUI-admin/issues"
+  },
+  "homepage": "https://github.com/Jasonccj/vue-webpack-elementUI-admin#readme"
+}
