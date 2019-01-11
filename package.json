@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/Jasonccj/vue-webpack-elementUI-admin#readme",
   "dependencies": {
-    "webpack": "^4.16.5"
+    "vue": "2.5.17"
+  },
+  "devDependencies": {
+    "vue-loader": "^15.3.0",
+    "webpack": "4.16.5"
   }
 }
