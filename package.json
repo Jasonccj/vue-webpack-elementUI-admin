@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Jasonccj/vue-webpack-elementUI-admin/issues"
   },
-  "homepage": "https://github.com/Jasonccj/vue-webpack-elementUI-admin#readme"
+  "homepage": "https://github.com/Jasonccj/vue-webpack-elementUI-admin#readme",
+  "dependencies": {
+    "webpack": "^4.16.5"
+  }
 }
