@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +21,10 @@
     "vue": "2.5.17"
   },
   "devDependencies": {
+    "css-loader": "1.0.0",
+    "html-webpack-plugin": "4.0.0-alpha",
     "vue-loader": "15.3.0",
-    "webpack": "4.16.5"
+    "webpack": "4.16.5",
+    "webpack-dev-server": "3.1.14"
   }
 }
