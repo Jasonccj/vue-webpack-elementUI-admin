@@ -12,3 +12,4 @@ npm i --save-dev css-loader@1.0.0                               安装webpack-de
 npm i --save-dev html-webpack-plugin@4.0.0-alpha                安装html-webpack-plugin  
 
 开始配置webpack.dev.conf.js文件
+创建一个development和production的公有webpack配置文件webpack.base.conf.js
