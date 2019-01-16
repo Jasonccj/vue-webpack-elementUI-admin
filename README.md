@@ -1,4 +1,4 @@
-# 建vue-admin
+# 搭建vue-admin
 
 ## 1.vue-cli3.0初始化vue-webpack工程
 vue init webpack vue-admin
