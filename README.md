@@ -13,3 +13,4 @@ vue init webpack vue-admin
     ? Set up unit tests No
     ? Setup e2e tests with Nightwatch? No
     ? Should we run `npm install` for you after the project has been created? (recommended) npm
+vueRouter的引入
