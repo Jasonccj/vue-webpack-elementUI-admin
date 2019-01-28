@@ -1,11 +1,12 @@
 <template>
-  <div id="app">
-    <router-view/>
+  <div>
+    <p>测试路由组件</p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'Ceshi'
 }
 </script>
+
