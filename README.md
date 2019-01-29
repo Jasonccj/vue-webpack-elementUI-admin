@@ -18,7 +18,10 @@ vue init webpack vue-admin
 因webpack-dev-server为3.0以上版本,故需要安装webpackCli
 
 ## 2.配置vue-Router
-配置路由,新建router文件夹,index.js作为路由的配置文件,并在main.js引入
+    1.配置路由,新建router文件夹,index.js作为路由的配置文件,并在main.js引入
+    2.上传基本的图片和SVG
+    3.配置permission.js
+
 
 
 

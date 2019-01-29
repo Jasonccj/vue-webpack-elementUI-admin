@@ -4,12 +4,17 @@ import Ceshi from '@/components/Ceshi'
 
 Vue.use(Router)
 
+const constantRouterMap = [
+  { path: '/login', component: () => import('@/views/login/index'), hidden: true },
+
+  {
+    path: '/',
+    name: 'Ceshi',
+    component: Ceshi
+  }
+]
+
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Ceshi',
-      component: Ceshi
-    }
-  ]
+  scrollBehavior: () => ({ y: 0 }),
+  routes: constantRouterMap
 })
