@@ -1,7 +1,7 @@
 <template>
   <div class="login-container">
     <el-form ref="loginForm" :model="loginForm" class="login-form" >
-      <h3>管理系统</h3>
+      <h3 class="title">vue-admin-template</h3>
       <el-form-item>
         <el-input v-model="loginForm.username" name="username" placeholder="请填写用户名称!" />
       </el-form-item>
@@ -34,15 +34,23 @@ $bg: #2d3a4b;
   height: 100%;
   width: 100%;
   background-color: $bg;
-  // .login-form {
-  //   position: absolute;
-  //   left: 0;
-  //   right: 0;
-  //   width: 520px;
-  //   max-width: 100%;
-  //   padding: 35px 35px 15px 35px;
-  //   margin: 120px auto;
-  // }
+  .login-form {
+    background-color: red;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 520px;
+    max-width: 100%;
+    padding: 35px 35px 15px 35px;
+    margin: 120px auto;
+  }
+  .title {
+    text-align: center;
+    font-size: 26px;
+    color: #EEE;
+    font-weight: 700;
+    margin: 0 auto 40px;
+  }
 }
 </style>
 
