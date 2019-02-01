@@ -22,6 +22,9 @@ vue init webpack vue-admin
     2.上传基本的图片和SVG
     3.配置permission.js
 
+## 3.全局组件配置
+    1.SVG组件封装
+
 
 
 

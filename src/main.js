@@ -10,6 +10,7 @@ import './styles/index.scss'
 import App from './App'
 import router from './router'
 
+import '@/icons' // icon
 import '@/permission'
 
 Vue.use(ElementUI)

@@ -3,10 +3,19 @@
     <el-form ref="loginForm" :model="loginForm" class="login-form" >
       <h3 class="title">管理系统模板</h3>
       <el-form-item>
+        <span class="svg-container">
+          <svg-icon icon-class="user" />
+        </span>
         <el-input v-model="loginForm.username" name="username" placeholder="请填写用户名称!" />
       </el-form-item>
       <el-form-item>
+        <span class="svg-container">
+          <svg-icon icon-class="password" />
+        </span>
         <el-input v-model="loginForm.password" placeholder="请填写用户密码!" />
+        <span class="show-pwd">
+          <svg-icon icon-class="eye" />
+        </span>
       </el-form-item>
       <el-button type="primary" style="width:100%;">
         登录
@@ -62,6 +71,8 @@ $light_gray:#eee;
 
 <style rel="stylesheet/scss"  lang="scss" scoped>
 $bg: #2d3a4b;
+$dark_gray:#889aa4;
+$light_gray:#eee;
 .login-container {
   position: fixed;
   height: 100%;
@@ -82,6 +93,22 @@ $bg: #2d3a4b;
     color: #EEE;
     font-weight: 700;
     margin: 0 auto 40px;
+  }
+  .svg-container {
+    display: inline-block;
+    width: 30px;
+    color: $light_gray;
+    padding: 6px 5px 6px 15px;
+    vertical-align: middle;
+  }
+  .show-pwd {
+    position: absolute;
+    color: $dark_gray;
+    right: 10px;
+    top: 7px;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
   }
 }
 </style>
