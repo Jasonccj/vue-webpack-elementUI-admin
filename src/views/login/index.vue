@@ -117,7 +117,7 @@ $light_gray:#eee;
   .svg-container {
     display: inline-block;
     width: 30px;
-    color: $light_gray;
+    color: $dark_gray;
     padding: 6px 5px 6px 15px;
     vertical-align: middle;
   }
