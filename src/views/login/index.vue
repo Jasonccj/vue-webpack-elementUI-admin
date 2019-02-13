@@ -1,6 +1,6 @@
 <template>
   <div class="login-container">
-    <el-form ref="loginForm" :model="loginForm" class="login-form" >
+    <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" >
       <h3 class="title">管理系统模板</h3>
       <el-form-item>
         <span class="svg-container">
@@ -17,7 +17,7 @@
           <svg-icon icon-class="eye" />
         </span>
       </el-form-item>
-      <el-button type="primary" style="width:100%;">
+      <el-button :loading="loading" type="primary" style="width:100%;" @click="handleLogin">
         登录
       </el-button>
     </el-form>
@@ -32,7 +32,16 @@ export default {
       loginForm: {
         username: 'admin',
         password: '123456'
-      }
+      },
+      loginRules: {
+        username: { type: 'String', required: true, message: '请填写用户名' },
+        password: ''
+      },
+      loading: false
+    }
+  },
+  methods: {
+    handleLogin() {
     }
   }
 }
