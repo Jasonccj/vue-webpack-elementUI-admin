@@ -12,9 +12,12 @@
         <span class="svg-container">
           <svg-icon icon-class="password" />
         </span>
-        <el-input v-model="loginForm.password" placeholder="请填写用户密码!" />
-        <span class="show-pwd">
-          <svg-icon icon-class="eye" />
+        <el-input
+          :type="pwdType"
+          v-model="loginForm.password"
+          placeholder="请填写用户密码!" />
+        <span class="show-pwd" @click="showPwd">
+          <svg-icon :icon-class="pwdType === 'password' ? 'eye' : 'eye-open'" />
         </span>
       </el-form-item>
       <el-button :loading="loading" type="primary" style="width:100%;" @click="handleLogin">
@@ -37,11 +40,19 @@ export default {
         username: { type: 'String', required: true, message: '请填写用户名' },
         password: ''
       },
-      loading: false
+      loading: false,
+      pwdType: 'password'
     }
   },
   methods: {
     handleLogin() {
+    },
+    showPwd() {
+      if (this.pwdType === 'password') {
+        this.pwdType = ''
+      } else {
+        this.pwdType = 'password'
+      }
     }
   }
 }
