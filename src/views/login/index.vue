@@ -2,13 +2,13 @@
   <div class="login-container">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" >
       <h3 class="title">管理系统模板</h3>
-      <el-form-item>
+      <el-form-item prop="username">
         <span class="svg-container">
           <svg-icon icon-class="user" />
         </span>
         <el-input v-model="loginForm.username" name="username" placeholder="请填写用户名称!" />
       </el-form-item>
-      <el-form-item>
+      <el-form-item prop="password">
         <span class="svg-container">
           <svg-icon icon-class="password" />
         </span>
@@ -37,8 +37,8 @@ export default {
         password: '123456'
       },
       loginRules: {
-        username: { type: 'String', required: true, message: '请填写用户名' },
-        password: ''
+        username: { required: true, message: '请填写用户名', trigger: 'blur' },
+        password: { required: true, message: '请填写密码', trigger: 'blur' }
       },
       loading: false,
       pwdType: 'password'
