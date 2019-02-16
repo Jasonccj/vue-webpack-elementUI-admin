@@ -25,6 +25,8 @@ vue init webpack vue-admin
 ## 3.全局组件配置
     1.SVG组件封装
 
+## 4.VueX 集成,src下store
+
 
 
 

@@ -1,12 +1,12 @@
 <template>
   <div class="login-container">
-    <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" >
+    <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on">
       <h3 class="title">管理系统模板</h3>
       <el-form-item prop="username">
         <span class="svg-container">
           <svg-icon icon-class="user" />
         </span>
-        <el-input v-model="loginForm.username" name="username" placeholder="请填写用户名称!" />
+        <el-input v-model="loginForm.username" name="username" placeholder="请填写用户名称!" auto-complete="on"/>
       </el-form-item>
       <el-form-item prop="password">
         <span class="svg-container">
@@ -15,12 +15,13 @@
         <el-input
           :type="pwdType"
           v-model="loginForm.password"
+          auto-complete="on"
           placeholder="请填写用户密码!" />
         <span class="show-pwd" @click="showPwd">
           <svg-icon :icon-class="pwdType === 'password' ? 'eye' : 'eye-open'" />
         </span>
       </el-form-item>
-      <el-button :loading="loading" type="primary" style="width:100%;" @click="handleLogin">
+      <el-button :loading="loading" type="primary" style="width:100%;" @click.native.prevent="handleLogin">
         登录
       </el-button>
     </el-form>
@@ -46,6 +47,15 @@ export default {
   },
   methods: {
     handleLogin() {
+      this.$refs.loginForm.validate((valid) => {
+        if (valid) {
+          console.log('submit')
+          this.loading = true
+        } else {
+          console.log('error submit!!')
+          return false
+        }
+      })
     },
     showPwd() {
       if (this.pwdType === 'password') {
