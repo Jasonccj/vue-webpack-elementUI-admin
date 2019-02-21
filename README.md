@@ -24,9 +24,10 @@ vue init webpack vue-admin
 
 ## 3.全局组件配置
     1.SVG组件封装
+    2.normalize.css配置全局css现代化标准
 
-## 4.VueX 集成,src下store
-
+## 4.VueX 集成,src下store文件夹
+    查看:https://vuex.vuejs.org/zh/
 
 
 
