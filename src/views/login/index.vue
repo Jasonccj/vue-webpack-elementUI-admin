@@ -45,6 +45,14 @@ export default {
       pwdType: 'password'
     }
   },
+  watch: {
+    $route: {
+      handler: function(route) {
+        this.redirect = route.query && route.query.redirect
+      },
+      immediate: true
+    }
+  },
   methods: {
     handleLogin() {
       this.$refs.loginForm.validate(valid => {
@@ -52,9 +60,11 @@ export default {
           this.loading = true
           this.$store.dispatch('Login', this.loginForm).then(() => {
             this.loading = false
+            console.log(this.redirect)
             this.$router.push({ path: this.redirect || '/' })
           }).catch(() => {
             this.loading = false
+            console.log('error request!!')
           })
         } else {
           console.log('error submit!!')

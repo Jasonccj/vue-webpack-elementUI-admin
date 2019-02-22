@@ -25,3 +25,10 @@ export function logout() {
     method: 'post'
   })
 }
+
+export function validate() {
+  return request({
+    url: '/home/validate',
+    method: 'get'
+  })
+}
