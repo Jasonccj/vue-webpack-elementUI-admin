@@ -32,6 +32,7 @@ const user = {
         login(username, userInfo.password).then(response => {
           setToken('admin')
           commit('SET_TOKEN', 'admin')
+          commit('SET_AVATAR', 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif')
           resolve()
         }).catch(error => {
           reject(error)
