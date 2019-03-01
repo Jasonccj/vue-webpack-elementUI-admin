@@ -19,9 +19,6 @@ export default {
   },
   created: function() {
     console.log('登录成功,进入dashboard页面')
-    this.$store.dispatch('Validate').then(() => {
-      console.log('验证用户接口访问成功')
-    })
   }
 }
 </script>

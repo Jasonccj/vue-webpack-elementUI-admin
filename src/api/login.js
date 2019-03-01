@@ -13,22 +13,14 @@ export function login(username, password) {
 
 export function getInfo(token) {
   return request({
-    url: '/user/info',
-    method: 'get',
-    params: { token }
+    url: '/user/validate',
+    method: 'get'
   })
 }
 
 export function logout() {
   return request({
     url: '/admin/logout',
-    method: 'get'
-  })
-}
-
-export function validate() {
-  return request({
-    url: '/home/validate',
     method: 'get'
   })
 }
