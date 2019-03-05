@@ -28,8 +28,8 @@ const constantRouterMap = [
       {
         path: 'index',
         name: 'Form',
-        component: () => import('@/views/form/index')
-        // meta: { title: 'Form', icon: 'form' }
+        component: () => import('@/views/form/index'),
+        meta: { title: 'Form', icon: 'form' }
       }
     ]
   }
