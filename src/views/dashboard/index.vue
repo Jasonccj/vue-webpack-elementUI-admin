@@ -1,8 +1,6 @@
 <template>
   <div class="dashboard-container">
-    首页内容
-    <!-- <div class="dashboard-text">name:{{ name }}</div>
-    <div class="dashboard-text">roles:<span v-for="role in roles" :key="role">{{ role }}</span></div> -->
+    <div class="dashboard-text">首页内容</div>
   </div>
 </template>
 
